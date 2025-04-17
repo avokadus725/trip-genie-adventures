@@ -115,7 +115,7 @@ const Profile = () => {
 
           <div className="mt-4 flex flex-wrap justify-center gap-2">
             {userProfile.interests.map((interest) => (
-              <Badge key={interest} variant="secondary" className="bg-accent">
+              <Badge key={interest} variant="primary" className="bg-accent">
                 {interest}
               </Badge>
             ))}
