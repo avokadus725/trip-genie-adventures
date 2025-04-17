@@ -28,6 +28,18 @@ export default {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
 				},
+				tripgenie: {
+					50: '#f3f1fe',
+					100: '#e9e4fd',
+					200: '#d6cdfb',
+					300: '#baaaf7',
+					400: '#9b87f5',
+					500: '#8b5cf6',
+					600: '#7e69ab',
+					700: '#6E59A5',
+					800: '#1A1F2C',
+					900: '#130e29',
+				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
 					foreground: 'hsl(var(--secondary-foreground))'
