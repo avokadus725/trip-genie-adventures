@@ -93,7 +93,7 @@ const Index = () => {
 
       {/* Welcome Section */}
       <section className="p-4">
-        <h1 className="text-2xl font-bold">Welcome back, Alex!</h1>
+        <h1 className="text-2xl font-bold">Welcome back, Lily!</h1>
         <p className="text-muted-foreground">Ready for your next adventure?</p>
       </section>
 
