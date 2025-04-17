@@ -31,7 +31,7 @@ const Index = () => {
       id: "2",
       title: "Beach Paradise",
       destination: "Bali, Indonesia",
-      image: "https://images.unsplash.com/photo-1531607411-83ca2a481ccb",
+      image: "https://hayatestate.com/wp-content/uploads/2024/03/playa-y-acantilados-en-bali-indonesia-1.jpg",
       startDate: "Aug 10, 2024",
       endDate: "Aug 20, 2024",
       companions: 0,

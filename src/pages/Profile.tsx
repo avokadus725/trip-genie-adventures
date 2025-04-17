@@ -41,7 +41,7 @@ const Profile = () => {
       id: "1",
       title: "Exploring Thailand",
       destination: "Bangkok, Thailand",
-      image: "https://images.unsplash.com/photo-1508009603885-50cf7c8dd861",
+      image: "https://www.marriott.com/content/dam/marriott-leisure/destinations/hero/asia/thailand/bangkok/bangkok_hero_destinations.jpg",
       startDate: "Jan 5, 2024",
       endDate: "Jan 15, 2024",
       companions: 2,
