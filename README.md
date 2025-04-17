@@ -1,0 +1,2 @@
+##TripGenie
+is a mobile application with an AI assistant designed to enhance the travel planning experience. The application aims to analyze user preferences, improve the accuracy of travel companion matching, and enhance the overall experience for travelers. The system will include features for creating travel plans, finding travel companions based on interests and compatibility, and providing real-time recommendations during trips.
