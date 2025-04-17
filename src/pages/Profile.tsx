@@ -33,7 +33,7 @@ const Profile = () => {
     rating: 4.8,
     interests: ["Adventure", "Photography", "Hiking", "Food", "Culture"],
     countries: 15,
-    image: "https://www.google.com/imgres?q=image%20girl%20travelling%20stock&imgurl=https%3A%2F%2Fmedia.istockphoto.com%2Fid%2F511054476%2Fphoto%2Fwoman-enjoying-the-sea-from-ferry-boat.jpg%3Fs%3D612x612%26w%3D0%26k%3D20%26c%3DmGgHR2ko9OZzhCxrRfFIUBhDLs5vd0LL4FFFTJO_LbY%3D&imgrefurl=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fgirl-travelling&docid=U5JP37uoCmusjM&tbnid=uBJ4bMKtdKB3cM&vet=12ahUKEwj-trD0l9-MAxWUQ6QEHWh9IccQM3oECGsQAA..i&w=612&h=408&hcb=2&ved=2ahUKEwj-trD0l9-MAxWUQ6QEHWh9IccQM3oECGsQAA",
+    image: "https://media.istockphoto.com/id/956864266/es/foto/viajero-mochilero-de-mujer-feliz-fotografiar-selfie-en-la-impresionante-costa-del-oc%C3%A9ano.jpg?s=612x612&w=0&k=20&c=ozvyLH6hReotjg7MHiqIoW_ZF1TSdir5hbjZgTKslIA=",
   };
   
   const pastTrips = [
