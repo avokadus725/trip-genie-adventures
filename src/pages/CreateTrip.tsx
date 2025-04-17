@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { BottomNav } from "@/components/ui/bottom-nav";
@@ -18,11 +17,26 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { format } from "date-fns";
 import { AiAssistantBubble } from "@/components/ai-assistant-bubble";
 import { CalendarIcon, ChevronLeft, MapPin, Plus, Users } from "lucide-react";
+import { TripSuccess } from "@/components/trip-success";
 
 const CreateTrip = () => {
   const navigate = useNavigate();
   const [date, setDate] = useState<Date | undefined>(undefined);
   const [endDate, setEndDate] = useState<Date | undefined>(undefined);
+  
+  const [tripTitle, setTripTitle] = useState("");
+  const [destination, setDestination] = useState("");
+  const [tripType, setTripType] = useState("");
+  const [budget, setBudget] = useState("");
+  const [description, setDescription] = useState("");
+  
+  const [showSuccess, setShowSuccess] = useState(false);
+  
+  const handleCreateTrip = () => {
+    // This would normally validate inputs and make an API call
+    // For now, we'll just show the success screen
+    setShowSuccess(true);
+  };
   
   return (
     <div className="pb-20">
@@ -49,7 +63,12 @@ const CreateTrip = () => {
           {/* Trip Title */}
           <div className="space-y-2">
             <Label htmlFor="trip-title">Trip Title</Label>
-            <Input id="trip-title" placeholder="My Amazing Vacation" />
+            <Input 
+              id="trip-title" 
+              placeholder="My Amazing Vacation"
+              value={tripTitle}
+              onChange={(e) => setTripTitle(e.target.value)}
+            />
           </div>
           
           {/* Destination */}
@@ -57,7 +76,13 @@ const CreateTrip = () => {
             <Label htmlFor="destination">Destination</Label>
             <div className="relative">
               <MapPin className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-              <Input id="destination" placeholder="Search for a city" className="pl-9" />
+              <Input 
+                id="destination" 
+                placeholder="Search for a city"
+                className="pl-9"
+                value={destination}
+                onChange={(e) => setDestination(e.target.value)}
+              />
             </div>
           </div>
           
@@ -113,7 +138,7 @@ const CreateTrip = () => {
           {/* Trip Type */}
           <div className="space-y-2">
             <Label htmlFor="trip-type">Trip Type</Label>
-            <Select>
+            <Select value={tripType} onValueChange={setTripType}>
               <SelectTrigger id="trip-type">
                 <SelectValue placeholder="Select trip type" />
               </SelectTrigger>
@@ -130,7 +155,7 @@ const CreateTrip = () => {
           {/* Budget */}
           <div className="space-y-2">
             <Label htmlFor="budget">Budget Range</Label>
-            <Select>
+            <Select value={budget} onValueChange={setBudget}>
               <SelectTrigger id="budget">
                 <SelectValue placeholder="Select budget range" />
               </SelectTrigger>
@@ -171,11 +196,16 @@ const CreateTrip = () => {
               id="description"
               placeholder="Describe your trip plans..."
               className="min-h-32"
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
             />
           </div>
           
           {/* Submit Button */}
-          <Button className="w-full bg-tripgenie-500 hover:bg-tripgenie-600 py-6 text-lg font-semibold">
+          <Button 
+            className="w-full bg-tripgenie-500 hover:bg-tripgenie-600 py-6 text-lg font-semibold"
+            onClick={handleCreateTrip}
+          >
             Create Trip
           </Button>
         </div>
@@ -186,6 +216,17 @@ const CreateTrip = () => {
       
       {/* Bottom Navigation */}
       <BottomNav />
+
+      {/* Success Screen */}
+      {showSuccess && (
+        <TripSuccess
+          tripName={tripTitle || "Amazing Trip"}
+          destination={destination || "Your Dream Destination"}
+          startDate={date ? format(date, "MMM d, yyyy") : undefined}
+          endDate={endDate ? format(endDate, "MMM d, yyyy") : undefined}
+          onClose={() => setShowSuccess(false)}
+        />
+      )}
     </div>
   );
 };
