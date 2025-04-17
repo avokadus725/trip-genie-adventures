@@ -2,6 +2,7 @@
 import { cn } from "@/lib/utils";
 import { LucideIcon } from "lucide-react";
 import { Link } from "react-router-dom";
+import * as LucideIcons from "lucide-react";
 
 interface BottomNavProps {
   className?: string;
@@ -29,9 +30,8 @@ interface BottomNavItemProps {
 }
 
 export function BottomNavItem({ icon, href, label, isActive }: BottomNavItemProps) {
-  // Dynamically import the icon
-  const icons: Record<string, LucideIcon> = require("lucide-react");
-  const Icon = icons[icon];
+  // Get icon from lucide-react icons
+  const Icon = LucideIcons[icon as keyof typeof LucideIcons] as LucideIcon;
 
   return (
     <Link
