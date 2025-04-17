@@ -24,16 +24,16 @@ import {
 const Profile = () => {
   // Mock data
   const userProfile = {
-    name: "Alex Morgan",
-    location: "San Francisco, California",
+    name: "Lily Bloom",
+    location: "Kharkiv, Ukraine",
     bio: "Adventure seeker and photography enthusiast. Always looking for new experiences and places to explore.",
-    joinedDate: "March 2022",
+    joinedDate: "March 2025",
     trips: 12,
     companions: 8,
     rating: 4.8,
     interests: ["Adventure", "Photography", "Hiking", "Food", "Culture"],
     countries: 15,
-    image: "https://i.pravatar.cc/150?img=8",
+    image: "https://www.google.com/imgres?q=image%20girl%20travelling%20stock&imgurl=https%3A%2F%2Fmedia.istockphoto.com%2Fid%2F511054476%2Fphoto%2Fwoman-enjoying-the-sea-from-ferry-boat.jpg%3Fs%3D612x612%26w%3D0%26k%3D20%26c%3DmGgHR2ko9OZzhCxrRfFIUBhDLs5vd0LL4FFFTJO_LbY%3D&imgrefurl=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fgirl-travelling&docid=U5JP37uoCmusjM&tbnid=uBJ4bMKtdKB3cM&vet=12ahUKEwj-trD0l9-MAxWUQ6QEHWh9IccQM3oECGsQAA..i&w=612&h=408&hcb=2&ved=2ahUKEwj-trD0l9-MAxWUQ6QEHWh9IccQM3oECGsQAA",
   };
   
   const pastTrips = [
